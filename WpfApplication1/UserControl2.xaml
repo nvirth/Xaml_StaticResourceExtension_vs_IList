@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="WpfApplication1.UserControl2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             xmlns:wpfApplication1="clr-namespace:WpfApplication1"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.Resources>
+            <system:String x:Key="String1">String1</system:String>
+            <system:String x:Key="String2">String2</system:String>
+            <system:String x:Key="String3">String3</system:String>
+            <system:String x:Key="String4">String4</system:String>
+        </Grid.Resources>
+        <wpfApplication1:UserControl1 x:Name="Control1">
+            <wpfApplication1:UserControl1.MyList>
+                <!-- If you comment out this line, you will get Exception -->
+                <!--<system:String>String1</system:String>-->
+                
+                <StaticResourceExtension ResourceKey="String1" />
+                <StaticResourceExtension ResourceKey="String2" />
+                <StaticResourceExtension ResourceKey="String3" />
+                <StaticResourceExtension ResourceKey="String4" />
+            </wpfApplication1:UserControl1.MyList>
+        </wpfApplication1:UserControl1>
+    </Grid>
+</UserControl>
+
+
+

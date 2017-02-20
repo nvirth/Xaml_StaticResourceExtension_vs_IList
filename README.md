@@ -1,0 +1,1 @@
+# Xaml_StaticResourceExtension_vs_IList
